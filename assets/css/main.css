@@ -1,0 +1,1820 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+.toppage-icon {
+    animation: fadein 3s forwards;
+  }
+  
+  @keyframes fadein {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+.top-fadein{
+    animation-delay: 5s;
+    animation: fadein 3s forwards;
+    margin-top: 5em;
+}
+
+@keyframes fadein {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+  
+.openbtn4{
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    cursor: pointer;
+      width: 60px;
+      height:60px;
+      margin-left: -2.5em;
+      margin-top: 15px;
+  }
+  
+  /*ボタン内側*/
+  .openbtn4 span{
+      display: inline-block;
+      transition: all .4s;/*アニメーションの設定*/
+      position: absolute;
+      left: 14px;
+      height: 2px;
+      border-radius: 5px;
+    background: #414141;
+      width: 45%;
+    }
+  
+  
+  .openbtn4 span:nth-of-type(1) {
+    top:13px; 
+  }
+  
+  .openbtn4 span:nth-of-type(2) {
+    top:19px;
+  }
+  
+  .openbtn4 span:nth-of-type(3) {
+    top:25px;
+  }
+  
+  .openbtn4 span:nth-of-type(3)::after {
+    content:"Menu";/*3つ目の要素のafterにMenu表示を指定*/
+    position: absolute;
+    top:5px;
+    left:-2px;
+    color: #313131;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+  }
+  
+  /*activeクラスが付与されると線が回転して×になり、Menu⇒Closeに変更*/
+  
+  .openbtn4.active span:nth-of-type(1) {
+      top: 14px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 30%;
+  }
+  
+  .openbtn4.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  .openbtn4.active span:nth-of-type(3){
+      top: 26px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 30%;
+  }
+  
+  .openbtn4.active span:nth-of-type(3)::after {
+    content:"Close";/*3つ目の要素のafterにClose表示を指定*/
+      transform: translateY(0) rotate(-45deg);
+    top:5px;
+    left:4px;
+  }
+  /*========= レイアウトのためのCSS ===============*/
+  
+  
+  a{
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .lead{
+    margin:20px 0 0 0;
+  }
+  
+  .btn-block{
+    width:200px;  
+    padding: 30px;
+  }
+
+
+.main {
+    width: 400px;
+    height: 400px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+    margin-top: 5em;
+    padding-top: 40px;
+    color: rgb(252, 208, 88);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 16px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+    padding-top: 40px;
+    margin-top: 2em;
+    margin-left: -2.5em;
+}
+
+.pass {
+        width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 16px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+}
+
+.submit {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #FFAD61, #FEE7AA);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    padding-top: 15px;
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    text-decoration: none;
+}
+.clear-decoration{
+    border: none;  /* 枠線を消す */
+    outline: none; /* クリックしたときに表示される枠線を消す */
+    background: transparent; /* 背景の灰色を消す */
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+    line-height: 1.4;
+    font-family: sans-serif;
+    color: #333;
+    text-align: center;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+.hash{
+    color: #2D68FF;
+    text-decoration: none;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 5;
+}
+.search-taghash{
+    color: #2D68FF;
+    text-decoration: none;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 5;
+    border: 0 solid;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 5px;
+    border-radius: 50%;
+}
+a:hover {
+    opacity: .8;
+}
+/* h1{
+    
+} */
+
+h2 {
+    margin: 0 0 16px;
+    font-size: 2.0rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+h3 {
+    margin: 16px 0 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+h4 {
+    margin: 8px 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#app {
+    padding: 60px 0 40px;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+
+/* header */
+header {
+    position: fixed;
+    height: 70px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FEE7AA;
+    z-index: 2147483647;
+}
+header .logo {
+    margin: 0 0 16px;
+    line-height: 1.2;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+header .back {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 1.2rem;
+}
+
+header .step {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+header .step li {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 8px 16px;
+    background: #eee;
+    font-size: 1.2rem;
+    text-align: center;
+}
+header .step li + li {
+    border-left: 1px solid #ddd;
+}
+header .step li.active {
+    background: #06f;
+    color: #fff;
+}
+
+/* .list */
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.list li {
+    margin: 0 0 32px;
+    padding: 16px;
+    border: 1px solid #ddd;
+}
+
+/* footer */
+/* .wrapper{ */
+    /* display: flex;
+    flex-direction: column;
+    min-height: 100vh; */
+    /* min-height: 0vh;
+    position: relative;←相対位置 */
+/* } */
+
+footer{
+    width: 100%;
+    background-color: #FEE7AA;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0; /*下に固定*/
+}
+
+footer .Twbutton {
+    display: flex;
+   list-style: none;
+   padding:0;
+   margin:0;
+   width:100%;
+}
+
+footer .Twbutton li {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding:0;
+    margin:0;
+    font-size: 14px;
+}
+
+
+.back-to-top{
+    float: left;
+    margin-left: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    padding: 1px 5px;
+    font-size: 23px;
+    border: 1px solid rgba(136, 126, 126, 0.4);
+    border-radius: 10px;
+    background-color: rgba(136, 126, 126, 0.04);
+}
+
+
+
+
+
+input[type="text"],
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.btn {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 16px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    background: #333;
+}
+.btn:hover {
+    opacity: 1;
+    background: #fff;
+    color: #333;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+.modal .wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+/* .bottom */
+.bottom {
+    position: relative;
+    margin-top: 24px;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    background: rgba(255, 255, 255, .8); */
+}
+.bottom .center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* section */
+section + section {
+    margin-top: 60px;
+}
+
+/* input.s */
+input.s {
+    width: 4em;
+}
+
+/* .loading */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.address {
+    margin-top: 16px;
+}
+/* /トップ/  */
+.toppage-icon{
+    margin-top: 7em;
+    animation-iteration-count:3;
+    animation: key 1s ease infinite alternate;
+}
+@keyframes key {
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(-10px);}
+}
+/* .Top{
+    
+} */
+.toppage-login{
+
+    width: 250px;
+    height: 30px;
+    padding-top: 3px;
+    font-size: 16px;
+    text-align: center;
+    margin: 7em auto 5em;
+    border: solid 1px #444444;
+    background-color: white;
+    box-sizing: border-box;
+}
+.toppage-register{
+    width: 250px;
+    padding-top: 3px;
+    font-size: 16px;
+    text-align: center;
+    border: solid 1px #444444;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 20px 70px 100px;
+}
+
+/*ハンバーガー*/
+.hum-profile-icon{
+    float: left;
+    margin-top: -14em;
+    margin-left: 8em;
+    border-radius: 50%;
+}
+.hum-account-name{
+    float: left;
+    margin-top: -12em;
+    margin-left: 14em;
+    font-size: 17px;
+    font-weight: bold;
+}
+.hum-account-id{
+    float: left;
+    margin-top: -11em;
+    margin-left: 14em;
+    font-size: 17px;
+    font-weight: bold;
+    color: #747474;
+}
+.hum-Follower-follow{
+    float: left;
+    margin-top: -12em;
+    margin-left: 13em;
+    font-size: 12px;
+    font-weight: bold;
+    color: #777777;
+}
+.hum-follower{
+    float: left;
+    margin-top: -7em;
+    margin-left: 9.6em;
+    font-size: 17px;
+    font-weight: bold;
+}
+.hum-follow{
+    float: left;
+    margin-top: -7em;
+    margin-left: 15.3em;
+    font-size: 17px;
+    font-weight: bold;
+}
+/*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.menu-btn{
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 2147483647;
+    width: 48px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: none;  /* 枠線を消す */
+    outline: none; /* クリックしたときに表示される枠線を消す */
+    background: transparent; /* 背景の灰色を消す */
+  }
+  
+  /*----------------------------
+  * メニュー本体
+  *----------------------------*/
+  .menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2147483646;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b9b9b9;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    
+  }
+  .menu__item{
+    width: 100%;
+    height: auto;
+    padding: 2.8em 1em;
+    text-align: left;
+    box-sizing: border-box;
+    margin-left: 8em;
+    margin-top: -4em;
+  }
+  .hum-logout{
+    float: left;
+    margin-bottom: 0;
+    margin-left: 3em;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: #FFAD61;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
+  .setting{
+      margin-left: 3em;
+  }
+  /*----------------------------
+  * アニメーション部分
+  *----------------------------*/
+  
+  /* アニメーション前のメニューの状態 */
+  .menu{
+    transform: translateX(-100vw);
+    transition: all .3s linear;
+  }
+  /* アニメーション後のメニューの状態 */
+  .menu.is-active{
+    transform: translateX(-30vw);
+  }
+  /*ハンバーガー終わり*/
+
+
+ /* アカウント登録画面 */
+
+
+  /* タイムライン　*/
+
+hr{
+    color: #414141;
+    opacity: .3;
+    margin-top: 1em;
+}
+.timeline {
+    padding: 1em  1em;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.animation{
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation: keyframe6 0.5s ease 0s infinite alternate;
+    animation-duration: 2.5s;
+    border-radius: 50%;
+    margin-top: 13.5px;
+    margin-left: 5px;
+    border: 1px solid rgba(0, 0, 0, .09);
+    box-shadow: 0 3px 4px rgb(0 0 0 / 10%);
+    float: left;
+    
+}
+.new-like{
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+    margin-top: -3.5em;
+    margin-left: -3.8em;
+    transform: scale(0.9, 1.5);
+    color: #ff6530;
+    display: inline-block;
+    transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    animation: keyframe6 3s ease 0s infinite alternate;
+    animation-duration: 2.8s;
+  }
+.keyframe6 {
+    animation-name: poyopoyo;
+  }
+  
+  @keyframes poyopoyo {
+    0%, 40%, 60%, 80% {
+      transform: scale(1.0);
+    }
+    50%, 70% {
+      transform: scale(0.95);
+    }
+  }
+  
+.home-profile-icon{
+    border-radius: 50%;
+    margin-top: 13.5px;
+    margin-left: 5px;
+    border: 1px solid rgba(0, 0, 0, .09);
+    box-shadow: 0 3px 4px rgb(0 0 0 / 10%);
+    float: left;
+}
+.home-actprofile-icon{
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 15px;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 10%);
+    float: left;
+}
+.home-list-icon{ 
+    float: left;   
+    margin-top: 1.5em;
+    margin-left: 5px;
+}
+.home-update{
+    height: 120px;
+    margin-top: 0px;
+    width: 100%;
+}
+.timeline-update-header{
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+.timeline-update-data{
+    float: left;
+    margin-left: 70px;
+}
+.home-follow{
+    height: 120px;
+    margin-top: 0px;
+    /* border: solid 1px rgba(0, 0, 0, .09); */
+    /* border-radius: 10px; */
+    width: 100%;
+}
+.timeline-follow-header{
+    font-size: 16px;
+    color: #414141;
+    font-weight: bold;
+    float: left;
+    margin-top: 1.5em;
+    margin-left: 4em;
+}
+.timeline-follow-data{
+    float: left;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+.home-reviwe{
+    margin-top: 0px;
+    width: auto;
+    height: auto;
+}
+.home-reviwe-space{
+    
+}
+.home-reviwe-image{
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+
+}
+.timeline-reviwe-data{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+	-webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    float: left;
+    margin-top: 10px;
+}
+.timeline-reviwe-header{
+    font-size: 15px;
+    color: #414141;
+    font-weight: bold;
+    float: left;
+    margin-top: 1.5em;
+    margin-left: 3em;
+}
+
+/*     
+    ul.timeline {
+    background-color: #fffef6;
+    border:dashed 1px #e5e5d1;
+    }
+    
+    .timeline span.midashi{
+    font-weight:500;
+    font-size:120%;
+    color: #fdc44f;
+    }
+    
+    ul.timeline li::before {
+    font-family: “Font Awesome 5 Free”;
+    content: “\f111”;
+    transform: scale(1.0);
+    font-weight: bold;
+    color: #fdc44f;
+    font-size:80%;
+    }
+    
+    @media ( min-width : 640px ){
+    .timeline li {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    }
+    
+    
+    
+    .timeline-content {
+    width: auto;
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding-left: 20px;
+    }
+} */
+/* /タイムライン */
+
+/*　検索画面 */
+/*フォーム全体*/
+.search_container{
+    box-sizing: border-box;
+    display: flex;
+    /* position: relative; */
+    border: 1px solid #999;
+    margin-top: 1.5em;
+    margin-left: 50px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    height: 2.3em;
+    width: 265px;
+    overflow: hidden;
+  }
+  .search_container input[type="text"]{
+    border: none;
+    height: 2.0em;
+    width: 13em;
+  }
+  .search_container input[type="text"]:focus {
+    outline: 0;
+  }
+  .search_container input[type="submit"]{
+    cursor: pointer;
+    font-family: FontAwesome;
+    border: none;
+    background: #3879D9;
+    color: #fff;
+    /* position: absolute; */
+    width: 3.5em;
+    height: 3.0em;
+    margin-top: -5px;
+    /* right:0px;
+    top: -3px; */
+    
+    outline : none;
+  }
+/*  /検索画面　*/
+
+.btnpost {
+    width: 90px;
+    height: 90px;
+    right: 20px;
+    position: fixed;
+    bottom: 90px; /*下に固定*/
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    border-radius: 50%;
+    background-color: #FF6D61;
+
+}
+/* .search-buttom{
+    
+} */
+@media screen and (max-width: 768px) {
+    /* スマホサイズでスライダー表示 */
+      .search-profile-border {
+        overflow-x: scroll;
+        height: 70px;
+    padding: 0.5em  0.5em;
+    margin: 25px auto;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    display: flex;
+      }
+      .search-shop-profile-border{
+        overflow-x: scroll;
+        height: 70px;
+    padding: 0.5em  0.5em;
+    margin-top: 45px;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    display: flex;
+    margin-bottom: 15px;
+      }
+      .search-profile-icon {
+        flex: 0 0 70%;
+        margin-top: auto;
+        margin-right: 10px;
+        float: left;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 10%);
+      }
+    }
+.search-reco-infulencer{
+    float: left;
+    margin-top: 2em;
+    margin-left: 1em;
+    font-size: 12px;
+}
+
+.search-reco-shops{
+    float: left;
+    /* margin-top: -1.3em; */
+    margin-left: 1em;
+    font-size: 12px;
+}
+.search-shop-icon{
+    border-radius: 50%;
+    display: flex;
+    justify-content: left;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 10%);
+}
+.searching-shopicon-border{
+    width: 95%;
+    height: 60px;
+    padding: 0.5em  0.5em;
+    margin: 40px auto;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+}
+.search-reco-tag{
+    float: left;
+    /* margin-top: -23px; */
+    margin-left: 10px;
+}
+.search-tag-border{
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    @keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+    transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+    transform: translateY(0);
+    }
+}
+.search-tag-name{
+    float: left;
+    margin-top: 6em;
+    margin-left: -6.7em;
+    font-size: 13px;
+    opacity: 1 !important;
+    
+}
+.search-tag-border-opacity{
+}
+.search-tag-image{
+    position: relative;
+    z-index: 2;
+    float: left;
+    opacity: .85;
+    margin-top: 0.5em;
+    margin-left: 15px;
+    border-radius: 10%;
+    background-color: rgba(65, 65, 65, .7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+}
+/*  /検索結果画面 */
+.searchingresult-profile-icon{
+    border-radius: 50%;
+    float: left;
+}
+.searchingresult-border{
+    width: 95%;
+    height: auto;
+    overflow: hidden;
+    padding: 0.5em  0.5em;
+    margin: 15px auto;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    @keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+    transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.searchingresult-shopname{
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.searchingresult-shopid{
+    float: left;
+    margin: 10px;
+    font-size: 16px;
+    margin-right: 100%;
+    font-weight: bold;
+    color: #747474;
+}
+.searchingresult-shopcategory{
+    float: left;
+    margin-top: 0.7em;
+    margin-left: 4em;
+}
+.searchingresult-profile-image{
+    float: left;
+    margin-top: 0.2em;
+    width: 100%;
+    height: 120px;
+    border-radius: 15%
+}
+.searchingresult-shopaddress{
+    float: left;
+    text-align: left;
+}
+/*  /地図画面   */ 
+.map-searching{
+    width: auto;
+    height: 360px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.map-near-shopaccount{
+
+}
+@media screen and (max-width: 480px){
+    .scroll_list{
+      margin: 0 auto;
+      padding: 5px;
+      width: 95%;
+      overflow-x: auto;  /* 横スクロールの指定 */
+      white-space: nowrap;  /* 横スクロールの指定 */
+      -webkit-overflow-scrolling: touch;  /* スクロールを滑らかにする */
+    }
+    .img{
+        border-radius: 50%;
+    }
+    .scroll_list li{
+      display: inline-block;  /* 横並びにする指定 */
+      
+      list-style: none;
+    }
+    .list1{
+      margin-left: 10px;
+      border-radius: 50%;
+    }
+}
+.map-searching-shopicon{
+    /* margin-top: -1em; */
+    float: left;
+    margin-top: 10px;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 10%);
+}
+.mapsearchresult-border{
+    margin-top: 0%;
+    margin-left: -20px;
+    height: 100%;
+}
+.details-outline{
+    width: 100px;
+    margin-left: 0%;
+}
+.map-result-border{
+    border: solid 1px rgba(0, 0, 0, .09);
+}
+.mapsearching-result-icon{
+    width: 11px;
+    height: 34px;
+    display: block;
+    cursor: pointer;
+    opacity: 1.5;
+  list-style: none;
+}
+.map-searchinp-shop{
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+details[open] .answer {
+    animation: fadein 0.5s ease;
+  }
+  summary {
+    list-style: none;
+    position: relative;
+    padding: 20px 70px 20px 30px;
+    cursor: pointer;
+  }
+  
+  @media not all and (min-width: 768px){
+    summary {
+      padding: 20px 50px 20px 20px;
+    }
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  summary:hover,
+  details[open] summary {
+  }
+  
+  summary::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    transition: transform 0.5s;
+    font-size: 30px;
+  }
+  
+  details[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  .answer {
+    padding: 20px 30px;
+  }
+  
+  @media not all and (min-width: 768px){
+    summary::after {
+      right: 20px;
+      font-size: 20px;
+    }
+  
+    .answer {
+      padding: 10px 20px;
+    }
+  }
+  
+  details[open] .answer {
+    animation: fadein 0.5s ease;
+  }
+  
+  @keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  body, p {
+    margin: 0;
+  }
+  
+  details {
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+  }
+  
+  @media not all and (min-width: 640px){
+    details {
+      width: 100%;
+    }
+  }
+  
+  details:first-of-type {
+    margin-top: 30px;
+  }
+/*  /店舗画面  */
+
+.tenpoinfo-header {
+    float: left;
+    top: 0%;
+
+}
+.tenpoinfo-icon {
+    float: left;
+    display: block;
+    margin: -40px 9.5em 0;
+    border-radius: 50%;
+}
+.shopinfo-category {
+    margin-left: 10.7em;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.shopinfo-name{
+    font-weight: bold;
+    font-size: 20px;
+}
+.shopinfo-id {
+    font-weight: bold;
+}
+.shop-info-follow-button{
+    float: right;
+    margin-top: -1.7em;
+    margin-right: 5.5em;
+}
+.shopinfo-tagline{
+    font-size: 13px;
+    width: 270px;
+    height: 75px;
+    padding: 0.5em  0.5em;
+    margin: 0 auto;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+.shopinfo-taglist{
+    list-style: none;
+    display: inline-block;
+    padding: 3px;
+}
+.shopinfo-address{
+    float: right;
+    margin-right: 3em;
+    margin-top: -30px;
+    font-size: 15px;
+}
+.profile-follow-button{
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    margin-left: 19em;
+}
+/*  /最近の投稿/ */
+.shopinfo-posts{
+    color: rgba(0, 0, 0, .8);
+    float: left;
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 19px;
+}
+.shopinfo-posts-list{
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    height: 450px;
+}
+/*  /評価されたお店/ */
+.shopinfo-reviwers{
+    color: rgba(0, 0, 0, .8);
+    float: left;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 19px;
+}
+.shopinfo-reviwers-list{
+    margin-top: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    height: 450px;
+    overflow: auto;
+}
+.shopinfo-reviwer{
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin: 7px auto;
+    height: auto;
+    overflow: hidden;
+    width:100%;
+}
+.shopinfo-reviwers-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: left;
+    margin: 10px;
+}
+.shopinfo-reviwers-name{
+    float: left;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.shopinfo-reviwe-content{
+    float: left;
+    padding: 0 10px;
+    font-size: 15px;
+    width: 95%;
+}
+.shopinfo-reviwers-id{
+    font-size: 15px;
+    float: left;
+    margin-top: -1em;
+    font-weight: bold;
+    color: #747474;
+}
+.shopinfo-reviwe-image{
+    width: 100%;
+}
+.shopinfo-reviwers-taglist{
+    float: left;
+    list-style: none;
+    display: inline-block;
+    font-size: 11px;
+    margin-left: 0;
+}
+/*  /評価したお店/ */
+.shopinfo-reviws{
+    color: rgba(0, 0, 0, .8);
+    float: left;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 19px;
+}
+.shopinfo-reviws-name{
+    margin-left: 1em;
+    float: left;
+}
+.shopinfo-reviws-icon{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    float: left;
+    margin: 10px;
+}
+.shopinfo-reviws-list{
+    margin-top: 70px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    height: 450px;
+    overflow: auto;
+}
+.shopinfo-reviw{
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin: 7px 15px;
+    height: 100px;
+    width: 345px;
+}
+.shopinfo-reviws-taglist{
+    list-style: none;
+    display: inline-block;
+    padding: 1px;
+    font-size: 11px;
+    margin-left: 0;
+}
+.shopinfo-reviws-name{
+    margin-top: 17px;
+    margin-left: 1em;
+    float: left;
+}
+.shopinfo-reviws-category{
+    float: right;
+    margin-left: 1em;
+    margin-top: 21px;
+    font-size: 12px;
+    margin-right: 12em;
+}
+
+/* /店舗情報　プロフィール/ */ 
+.shopinfo-profile-icon{
+    border-radius: 50%;
+    float: left;
+    display: block;
+    margin: -40px 9.5em 0;
+    border-radius: 50%;
+}
+.shopinfo-users-follower
+{
+    float: left;
+    font-size: 12px;
+    margin-top: 0.8em;
+    margin-left: 10em;
+    margin-right: 5em;
+}
+.shopinfo-users-follower-value{
+    float: left;
+    margin-left: 9em;
+}
+.shopinfo-users-name{
+    float: left;
+    margin-left: 8em;
+    font-size: 20px;
+    font-weight: bold;
+}
+.shopinfo-users-id{
+    float: left;
+    margin-top: 30px;
+    margin-left: -2.5em;
+}
+.shopinfo-users-introduction{
+    float: left;
+    margin-top: 5em;
+    margin-left: 1em;
+    margin-right: 5em;
+}
+.shopinfo-users-link{
+    margin-top: 30px;
+    margin-left: 10em;
+    margin-bottom: 5em;
+}
+.shopinfo-users-tagline{
+    font-size: 13px;
+    list-style: none;
+    width: 270px;
+    height: 75px;
+    padding: 0.5em  0.5em;
+    margin: 6em auto;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+.shopinfo-users-taglist{
+    list-style: none;
+    display: inline-block;
+    padding: 3px;
+}
+.shopinfo-owner{
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 19px;
+}
+.owner-introduction{
+    font-size: 16px;
+    float: left;
+    width: 280px;
+    height: 80px;
+    margin-top: 2em;
+    margin-right: 45px;
+    vertical-align: top;
+    margin-left: 3.5em;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+}
+/* /プロフィール/  */  
+.profile-edit{
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    margin-left: 3em;
+    margin-right: 35px;
+}
+.profile-shopicon{
+    float: left;
+    margin-left: 3em;
+}
+.profile-comit{
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+}
+.profile-header{
+    top: 0%;
+    z-index: 1;
+}
+.profile-icon{
+    float: left;
+    display: block;
+    margin: -40px 9.5em 0;
+    border-radius: 50%;
+    z-index: 2147483646;
+    position: absolute;
+}
+.profile-follower-align{
+    margin-top: 0.8em;
+    margin-left: 7.4em;
+    text-align: center;
+}
+.profile-follower{
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #777777;
+}
+.profile-follower-value{
+    font-weight: bold;
+    float: left;
+    margin-top: 1em;
+    margin-left: -2.5em;
+    text-align: center;
+}
+.profile-follow-align{
+    float: left;
+    margin-left: 1.9em;
+}
+.profile-follow{
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #777777;
+}
+.profile-follow-value{
+    float: left;
+    margin-top: 1em;
+    font-weight: bold;
+    margin-left: -2.5em;
+    text-align: center;
+}
+.profile-name{
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.profile-id{
+    margin-top: -1em;
+    font-weight: bold;
+    color: #777777;
+    text-align: center;
+}
+.profile-introduction{
+    font-size: 16px;
+    float: left;
+    width: 360px;
+    height: 100px;
+    margin-left: 1em;
+    text-align: center;
+    margin-top: -3em;
+    vertical-align: top;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+}
+.profile-soul{
+    float: left;
+    margin-left: 4em;
+}
+.profile-link{
+    width: 270px;
+    display: -webkit-box;
+	-webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.profileedit-link{
+    font-size: 13px;
+    width: 200px;
+    margin-left: -5em;
+    height: 10px;
+    border: solid 1px rgba(0, 0, 0, .09);
+}
+.profile-tagline{
+    font-size: 13px;
+    list-style: none;
+    width: 270px;
+    height: auto;
+    padding: 0.5em  0.5em;
+    margin: 4em auto;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+.profile-taglist{
+    list-style: none;
+    display: inline-block;
+    padding: 3px;
+}
+.MyLIKEblock-border{
+    height: 200px;
+    border: solid 1px rgba(0, 0, 0, .09);
+    border-radius: 15px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    margin-bottom: 3em;
+}
+.profile-MyLIKE{
+    margin-top: 1em;
+    float: left;
+    margin-left: 20px;
+}
+.profile-MyLIKE-icon1{
+    float: left;
+    margin-top: 1em;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.profile-MyLIKE-icon2{
+    float: left;
+    margin-top: 1em;
+    border-radius: 10px;
+}
+.profile-MyLIKE-icon3{
+    float: left;
+    margin-left: 9.9em;
+    border-radius: 10px;
+}
+.profile-MyLIKE-icon4{
+    float: left;
+    border-radius: 10px;
+}
+/* /投稿画面/  */ 
+.post-cancel{
+    float: left;
+    margin-left: 2em;
+    margin-top: 15px;
+}
+.post-copy{
+    float: left;
+    margin-left: 9em;
+    margin-top: 15px;
+}
+.post-up{
+    float: left;
+    margin-left: 1.5em;
+    margin-top: 15px;
+}
+.post-shopsearch{
+    float: left;
+    margin-top: 3em;
+}
+.post-shop-icon{
+    float: left;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 2em;
+}
+.post-name{
+    font-weight: bold;
+    float: left;
+    margin-top: 14px;
+    margin-left: 4em;
+}
+.post-id{
+    float: left;
+    margin-top: 35px;
+    margin-left: -30px;
+}
+.post-category{
+    font-size: 14px;
+    float: left;
+    margin-top: 60px;
+    margin-left: -70px;
+}
+.post-address{
+    font-size: 14px;
+    float: left;
+    margin-top: 60px;
+}
+.post-shoptag{
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    box-sizing: border-box;
+    border-radius: 15px;
+    float: left;
+    margin-top: 10px;
+    height: 50px;
+}
+.post-substance{
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    box-sizing: border-box;
+    border-radius: 15px;
+    float: left;
+    margin-top: 2em;
+    margin-left: 1em;
+    width:350px;
+    height: 200px;
+}
+/* /フォロワー / */ 
+.follower{
+    font-weight: bold;
+}
+.follower-outline{
+    float: left;
+    margin-top: 10px;
+}
+.follows-profile-icon{
+    border-radius: 50%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 1em;
+}
+.follow-follower{
+    margin-top: 1em;
+    margin-left: -5px;
+    font-size: 15px;
+}
+.follow-buttom{
+    float: left;
+    margin-left: 20em;
+    margin-top: -3em;
+    width: 80px;
+    height: 30px;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    border: 0;
+    font-size: 13px;
+}
+.toggle1 {
+    position: relative;
+    float: left;
+    margin-left: 20em;
+    margin-top: -3em;
+    width: 80px;
+    height: 30px;
+    z-index: 3;
+    display: none;
+}
+label {
+    float: left;
+    margin-left: 20em;
+    margin-top: -3.4em;
+    text-align: center;
+    width: 85px;
+    height: 30px;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    border: 0;
+    font-size: 13px;
+  }
+
+  input:checked + label {
+    background-color: rgba(253, 135, 38, .7);
+
+  }
+  .follow-buttom{
+    display: block;
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+  }
+  
+.follow-name{
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.follower-id-outline{
+    float: left;
+    margin-top: 1em;
+    text-align: left;
+}
+.follow-id{
+    float: left;
+    margin-top: -3em;
+    margin-left: 6em;
+    font-size: 14px;
+    font-weight: bold;
+    color: #747474;
+}
+/* /MyLike/ */
+.MyLike-newlist{
+    border-radius: 10%;
+    margin-top: 2em;
+    margin-left: -1em;
+}
+.new-list{
+    float: left;
+    margin-top: 4.5em;
+    margin-left: 2em;
+}
+.List-name{
+    float: left;
+    margin-top: 1em;
+    margin-left: 2.6em;
+    font-weight: bold;
+}
+.List-account-name{
+    float: left;
+    margin-top: 2em;
+    margin-left: -5em;
+}
+.MyLike-profile-icon{
+    border-radius: 50%;
+    float: left;
+    margin-top: 4em;
+    margin-left: -5.5em;
+}
+/* .list-MyLIKE-icon1{
+    
+} */
+/* .list-MyLIKE-icon1{
+
+} */
+/* / 設定画面/ */
+.establish-content{
+    margin-top: 100px;
+    margin-left: 7em;
+    text-align: left;
+    font-size: 17px;
+}

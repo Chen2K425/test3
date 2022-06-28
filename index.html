@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NEW LIKE</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="NEW LIKE">
+        <link rel="apple-touch-icon" href="./assets/img/application_icon.png" size="180x180">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyA_8ccmiAkT-51Pczd_nhf0GAoZxis_gqA&language=ja"></script>
+        <script type="module" src="./assets/js/main.js"></script>
+    </head>
+    <body>
+            
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <div id="app">
+            <header role="banner">
+                <h1><img src="./assets/img/application_icon.png" class="newlike"v-if="$route.name!=='Top'" height="35px" width="35px"><router-link to="/"></router-link></h1>
+                <div id="barger" v-if="$route.name!=='AccReg' && $route.name!=='Top' && $route.name!=='Register' && $route.name!=='Follower' && $route.name!=='Follow'">
+                    <button type="button" class="menu-btn" id="menu-btn" v-on:click="open=!open"><div class="openbtn4" v-if="$route.name!=='AccReg' && $route.name!=='Top' && $route.name!=='Register' && $route.name!=='Follower' && $route.name!=='Follow'"><span></span><span></span><span></span></div><br>
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </button> 
+                    <div class="menu" v-bind:class="{'is-active' : open }">
+                    <section>
+                        <div onclick="btnClick();"><router-link :to="'/'+'Profile'" >
+                            <img v-bind:src="profile.icon_img" alt="tenpoinfo-header" class="hum-profile-icon" width=65px height=65px>
+                            <span class="hum-account-name">{{ profile.user_name }}</span>
+                            <span class="hum-account-id">@{{ profile.account_id }}</span><br>
+                        </router-link></div>
+                        <div>
+                            <span class="hum-Follower-follow">フォロワー　　　フォロー</span>
+                            <span class="hum-follower" onclick="btnClick();"><router-link :to="'/Follower/' + profile.id">{{ profile.follower }}</router-link></span>
+                            <span class="hum-follow" onclick="btnClick();"><router-link :to="'/Follow/' + profile.id">{{ profile.followed }}</router-link></span>
+                            <hr style="margin-top: -3em;">
+                        </div>
+                    </section>
+                    <div>
+                        <div class="menu__item"><router-link :to="'/'+'MyLike'" ><img src="./assets/img/Mylike.png" onclick="btnClick();" alt="tenpoinfo-header" width=25px height=25px>MY LIKE</router-link></div>
+                        <div class="menu__item"><router-link :to="'/'+'ProfileEdit'" ><img src="./assets/img/repare.png" onclick="btnClick();" alt="tenpoinfo-header" width=25px height=25px>プロフィール編集</router-link></div>
+                        <div v-if="profile.store_auth == 1">
+                            <div class="menu__item"><img src="./assets/img/store.png" onclick="btnClick();" alt="tenpoinfo-header" width=25px height=25px>店舗化する</div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button class="hum-logout" onclick="btnClick();" @click="logout">logout</button>
+                        <span><router-link :to="'/'+'Establish'" ><img src="./assets/img/setting.png" alt="tenpoinfo-header" class="setting" onclick="btnClick();" width=30px height=30px></router-link></span>
+                    </div>
+                </div>
+                <!-- <router-link :to="backTo" class="btn back" v-if="backTo !== ''">戻る</router-link> -->
+            </header>
+            <main role="main">
+                
+                <router-view @parent-method="updateMenu"></router-view>
+            </main>
+
+
+            <footer class="under" v-bind:class="{'is-active' : open }" v-if="$route.name!=='AccReg' && $route.name!=='Top' && $route.name!=='Register'">
+                <ul class="Twbutton">
+                    <li :class="{ active: $route.name==='Home' }"><router-link :to="'/'+'Home'" ><img src="./assets/img/home.png" alt="home" width="30px" height="30px"></router-link></li>
+                    <li :class="{ active: $route.name==='Serch' }"><router-link :to="'/'+'Serch'"><img src="./assets/img/search.png" alt="search" width="30px" height="30px"></router-link></li>
+                    <li :class="{ active: $route.name==='Map' }"><router-link :to="'/'+'Map'"><img src="./assets/img/map.png" alt="map" width="30px" height="30px"></router-link></li>
+                    <li :class="{ active: $route.name==='Profile' }"><router-link :to="'/'+'Profile'"><img src="./assets/img/prof.png" alt="profiel" width="30px" height="30px"></router-link></li>
+                </ul>
+            </footer>
+        <!-- /#app --></div>
+        <!-- <script src="js/5-2-4.js"></script> -->
+        <script>
+            function btnClick() {
+                document.getElementById("menu-btn").click()
+            }
+        </script>
+    </body>
+</html>
+

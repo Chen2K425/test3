@@ -1,0 +1,14 @@
+diff a/sotusei/assets/css/main.css b/sotusei/assets/css/main.css	(rejected hunks)
+@@ -868,9 +868,9 @@
+ }
+ /*  /地図画面   */ 
+ .map-searching{
+-    position: static;
+-    margin-top: 15px;
+-    height : 365px;
++    z-index: 10;
++    width: 300px;
++    height: 300px;
+ }
+ .map-searching-shopicon-border{
+     width: 95%;
